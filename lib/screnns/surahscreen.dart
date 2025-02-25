@@ -7,11 +7,14 @@ class SurahDetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(surah.englishName)),
+      appBar: AppBar(title: Text(surah.name)),
       body: ListView.builder(
         itemCount: surah.ayahs.length,
         itemBuilder: (context, index) {
-          return ListTile(title: Text(surah.ayahs[index].text));
+          return ListTile(
+            title: Text(surah.ayahs[index].text),
+            trailing: Icon(Icons.circle),
+          );
         },
       ),
     );
